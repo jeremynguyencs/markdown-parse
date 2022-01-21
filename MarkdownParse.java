@@ -38,6 +38,10 @@ public class MarkdownParse {
       if (line.contains("!") && line.indexOf("!") + 1 == line.indexOf("[")) {
         return false;
       }
+      // if letter ) imemdiately follows ), empty link, return false
+      if (line.charAt(line.indexOf('(') + 1) == ')') {
+        return false;
+      }
       return true;
     }
     return false;
@@ -48,7 +52,7 @@ public class MarkdownParse {
     // get the text between the ( and the )
     link = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
     // throw error if link is not formatted correctly
-    if (!determineLink(line) || link.equals("")) {
+    if (!determineLink(line)) {
       throw new IllegalArgumentException("Link is not formatted correctly");
     }
     return link;
