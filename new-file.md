@@ -8,6 +8,7 @@
 [jeremy](
 [jeremy])
 [https://jeremy.com] some other words 
+![image](https://jeremy.com/image.png)
 hey im here
 (im kinda far away)
 )
