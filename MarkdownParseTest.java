@@ -21,6 +21,22 @@ public class MarkdownParseTest {
     String contents = Files.readString(Path.of("/Users/jeremy/Documents/Github/markdown-parse/test-file.md"));
     ArrayList<String> links = MarkdownParse.getLinks(contents);
     List<String> expected = List.of("https://something.com", "some-page.html");
-    assertEquals(expected, links);
+    assertEquals("Should have expected links", expected, links);
+  }
+  
+  @Test
+  public void markdownTest2() throws IOException {
+    String contents = Files.readString(Path.of("/Users/jeremy/Documents/Github/markdown-parse/test-file-2.md"));
+    ArrayList<String> links = MarkdownParse.getLinks(contents);
+    ArrayList<String> expected = new ArrayList<>();
+    assertEquals("Should have expected links", expected, links);
+  }
+
+  @Test
+  public void markdownTest3() throws IOException {
+    String contents = Files.readString(Path.of("/Users/jeremy/Documents/Github/markdown-parse/test-file-3.md"));
+    ArrayList<String> links = MarkdownParse.getLinks(contents);
+    ArrayList<String> expected = new ArrayList<>();
+    assertEquals("Should have expected links", expected, links);
   }
 }
