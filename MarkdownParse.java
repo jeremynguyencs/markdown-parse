@@ -1,4 +1,3 @@
-
 // File reading code from https://howtodoinjava.com/java/io/java-read-file-to-string-examples/
 // Split string from https://www.geeksforgeeks.org/split-string-java-examples/
 // Indexof from https://www.w3schools.com/java/ref_string_indexof.asp
@@ -27,14 +26,16 @@ public class MarkdownParse {
       int indexOfBracket = line.indexOf("]", line.indexOf("["));
       int indexOfParen = line.indexOf(")", line.indexOf("("));
       if (indexOfBracket == -1 || indexOfParen == -1) {
-        // if there is no ] after the [ or no ) after the (, then it is not a link
+        // if there is no ] after the [ or no ) after the (, then it is not a 
+        // link
         return false;
       }
       // if the the letter directly after ] is not (, then it is not a link
       if (line.charAt(indexOfBracket + 1) != '(') {
         return false;
       }
-      // if the letter ! exists and is directly before [, it is an image and not a link
+      // if the letter ! exists and is directly before [, it is an image and
+      // not a link
       if (line.contains("!") && line.indexOf("!") + 1 == line.indexOf("[")) {
         return false;
       }
