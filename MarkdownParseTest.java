@@ -15,15 +15,12 @@ public class MarkdownParseTest {
   public void addition() {
     assertEquals(2, 1 + 1);
   }
+
   @Test
-  public void markdownTest() {
-    try {
-      String contents = Files.readString(Path.of("test-file.md"));
-      ArrayList<String> links = MarkdownParse.getLinks(contents);
-      List<String> expected = List.of("https://something.com", "some-page.html");
-      assertEquals(expected, links);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
+  public void markdownTest() throws IOException {
+    String contents = Files.readString(Path.of("/Users/jeremy/Documents/Github/markdown-parse/test-file.md"));
+    ArrayList<String> links = MarkdownParse.getLinks(contents);
+    List<String> expected = List.of("https://something.com", "some-page.html");
+    assertEquals(expected, links);
   }
 }
