@@ -52,6 +52,9 @@ public class MarkdownParse {
     String link = "";
     // get the text between the ( and the )
     link = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
+    if (link.contains(" ")) {
+      link = link.substring(0, link.indexOf(" "));
+    }
     // throw error if link is not formatted correctly
     if (!determineLink(line)) {
       throw new IllegalArgumentException("Link is not formatted correctly");
