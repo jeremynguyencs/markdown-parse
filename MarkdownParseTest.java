@@ -70,7 +70,7 @@ public class MarkdownParseTest {
     List<String> expected5 = new ArrayList<String>();
     List<String> expected6 = new ArrayList<String>();
     List<String> expected7 = new ArrayList<String>();
-    List<String> expected8 = List.of("a link on the first line");
+    List<String> expected8 = List.of("alinkonthefirstline");
     // A list of lists of each file's expected links
     List<List<String>> expectedOutputs = List.of(expected, expected2, expected3, expected4, expected5, expected6, expected7, expected8);
 
