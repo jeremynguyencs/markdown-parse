@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -29,7 +28,7 @@ public class MarkdownParseTest {
 
   @Test
   public void markdownTest2() throws IOException {
-    String contents = Files.readString(Path.of("/Users/jeremy/Documents/Github/markdown-parse/test-file-2.md"));
+    String contents = Files.readString(Path.of("test-file-2.md"));
     ArrayList<String> links = MarkdownParse.getLinks(contents);
     ArrayList<String> expected = new ArrayList<>();
     assertEquals("Should have expected links", expected, links);
@@ -37,7 +36,7 @@ public class MarkdownParseTest {
 
   @Test
   public void markdownTest3() throws IOException {
-    String contents = Files.readString(Path.of("/Users/jeremy/Documents/Github/markdown-parse/test-file-3.md"));
+    String contents = Files.readString(Path.of("test-file-3.md"));
     ArrayList<String> links = MarkdownParse.getLinks(contents);
     ArrayList<String> expected = new ArrayList<>();
     assertEquals("Should have expected links", expected, links);
@@ -77,7 +76,7 @@ public class MarkdownParseTest {
     List<List<String>> expectedOutputs = List.of(expected, expected2, expected3, expected4, expected5, expected6, expected7, expected8);
 
     // Loop through each file and add their path to a list
-    File[] files = new File("/Users/jeremy/Documents/Github/markdown-parse/new_tests").listFiles();
+    File[] files = new File("new_tests").listFiles();
     ArrayList<Path> paths = new ArrayList<>();
     for (File file : files) {
       paths.add(file.toPath());
