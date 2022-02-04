@@ -15,12 +15,13 @@ import java.util.List;
 public class MarkdownParseTest {
   @Test
   public void addition() {
-    assertEquals(2, 1 + 1);
+    // This should fail
+    assertEquals(6, 1 + 1);
   }
 
   @Test
   public void markdownTest() throws IOException {
-    String contents = Files.readString(Path.of("/Users/jeremy/Documents/Github/markdown-parse/test-file.md"));
+    String contents = Files.readString(Path.of("test-file.md"));
     ArrayList<String> links = MarkdownParse.getLinks(contents);
     List<String> expected = List.of("https://something.com", "some-page.html");
     assertEquals("Should have expected links", expected, links);
