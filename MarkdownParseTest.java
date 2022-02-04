@@ -99,7 +99,7 @@ public class MarkdownParseTest {
   }
 
   @Test
-  public void markdownTestBreaking() {
+  public void markdownTestBreaking() throws IOException {
     String contents = Files.readString(Path.of("test-file-4.md"));
     ArrayList<String> links = MarkdownParse.getLinks(contents);
     List<String> expected = List.of("https://duckduckgo.com");
