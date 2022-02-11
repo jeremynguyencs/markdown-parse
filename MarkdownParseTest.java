@@ -42,7 +42,7 @@ public class MarkdownParseTest {
   }
 
   @Test
-  public void markdownTestDetermineLink() {
+  public void markdownTestDetermineLink() throws IOException {
     boolean test1 = MarkdownParse.determineLink("[test](https://i_am_a_link)");
     boolean test2 = MarkdownParse.determineLink("![test](https://i_am_an image)");
     boolean test3 = MarkdownParse.determineLink("[hi]");
@@ -52,7 +52,7 @@ public class MarkdownParseTest {
   }
 
   @Test
-  public void markdownTestReturnLink() {
+  public void markdownTestReturnLink() throws IOException {
     String test1 = MarkdownParse.returnLink("[test](https://i_am_a_link)");
     String test2 = MarkdownParse.returnLink("[hi](#joebiden)");
     String test3 = MarkdownParse.returnLink("[hi](howdy)");
@@ -62,7 +62,7 @@ public class MarkdownParseTest {
   }
 
   @Test
-  public void markdownTestNewTests() {
+  public void markdownTestNewTests() throws IOException {
     List<String> expected = List.of("https://something.com", "some-page.html");
     List<String> expected2 = List.of("https://something.com", "some-page.html");
     List<String> expected3 = new ArrayList<String>();
@@ -93,7 +93,8 @@ public class MarkdownParseTest {
         assertEquals("Should have expected links", expectedOutputs.get(index), links);
         index++;
       } catch (IOException e) {
-        e.printStackTrace();
+        System.out.println("Test");
+        return;
       }
     }
   }
