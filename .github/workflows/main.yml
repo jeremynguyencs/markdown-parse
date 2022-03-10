@@ -30,6 +30,6 @@ jobs:
         run: echo Hello, world!
 
       # Run JUnit tests
-      - name: Run JUnit tests
+      - name: Run JUnit tests with makefile
         run: |
           make test
