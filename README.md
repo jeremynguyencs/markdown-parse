@@ -6,15 +6,14 @@ This application was created for the purpose of parsing markdown links for the c
 
 The directory structure of the application is as follows:
 ```bash
-
 ├── lib
 │   ├── commonmark-0.18.2.jar
 │   ├── hamcrest-core-1.3.jar
 │   └── junit-4.13.2.jar
 ├── my-test-files
-│   ├── ...other test files
+│   └── ...other test files
 ├── test-files
-│   ├── ...other test files
+│   └── ...other test files
 ├── MarkdownParse.java
 ├── MarkdownParseTest.java
 ├── makefile
