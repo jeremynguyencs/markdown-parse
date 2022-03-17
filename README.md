@@ -2,7 +2,7 @@
 
 ## Description
 
-This application was created for the purpose of parsing markdown links for the course CSE 15L: Software Tools and Techniques Laboratory with Professor Joe Politz at the University of California San Diego. The application is written in Java and uses the JUnit library to parse the program with markdown test files. The application is capable of parsing the markdown file and returning the links in the file. The application uses the following libraries: CommonMark, Hamcrest, and JUnit. It includes the script `mdparse` and `script.sh` and a makefile.
+This application was created for the purpose of parsing markdown links for the course CSE 15L: Software Tools and Techniques Laboratory with Professor Joe Politz at the University of California San Diego. The application is written in Java and uses the JUnit library to parse the program with markdown test files. The application is capable of parsing the markdown file and returning the links in the file. The application uses the following libraries: CommonMark, Hamcrest, and JUnit. It includes the scripts `mdparse` and `script.sh` and a makefile. The repository also uses a Github Action to run the tests with a continuous integration workflow.
 
 The directory structure of the application is as follows:
 ```
