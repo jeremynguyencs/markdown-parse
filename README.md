@@ -38,12 +38,22 @@ git clone https://github.com/jeremynguyencs/markdown-parse.git
 
 ## Usage
 
-The user can use the application to run any given markdown test file by running the following command using bash:
+The user can use the application to run any given markdown file by running the following command using bash:
 ```shell
 bash mdparse test-file.md
 ```
 where `test-file.md` is the name of the markdown file to be parsed.
 
+The user can also use the `java` command to also run the program with any given markdown file:
+```java
+javac MarkdownParse.java
+java MarkdownParse test-file.md
+```
+
+To debug the program, the user can use the Java debugger `jdb` through the makefile `make` command.
+```shell
+make debug
+```
 
 ## Tests
 
