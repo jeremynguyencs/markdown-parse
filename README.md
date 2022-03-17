@@ -2,10 +2,10 @@
 
 ## Description
 
-This application was created for the purpose of parsing markdown links for the course CSE 15L: Software Tools and Techniques Laboratory at the University of California San Diego. The application is written in Java and uses the JUnit library to parse the program with markdown test files. The application is capable of parsing the markdown file and returning the links in the file. The application uses the following libraries: CommonMark, JUnit, and Hamcrest.
+This application was created for the purpose of parsing markdown links for the course CSE 15L: Software Tools and Techniques Laboratory with Professor Joe Politz at the University of California San Diego. The application is written in Java and uses the JUnit library to parse the program with markdown test files. The application is capable of parsing the markdown file and returning the links in the file. The application uses the following libraries: CommonMark, Hamcrest, and JUnit. It includes the script `mdparse` and `script.sh` and a makefile.
 
 The directory structure of the application is as follows:
-```bash
+```
 ├── lib
 │   ├── commonmark-0.18.2.jar
 │   ├── hamcrest-core-1.3.jar
@@ -57,7 +57,7 @@ make debug
 
 ## Tests
 
-To run `MarkdownParseTest.java` please use the `make` command to compile and run the Java program and corresponding JUnit tests.
+To run `MarkdownParseTest.java`, use the `make` command to compile and run the Java program and corresponding JUnit tests.
 ```shell
 make test
 ```
